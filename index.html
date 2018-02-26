@@ -5,13 +5,12 @@
 	<meta charset="utf-8">
 	<title>GIFTASTIC HAWAII!</title>
 
+	<!--jquery link-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 	<!--Bootstrap link-->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!--Icon-->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
 
 	<!--Custom CSS link-->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -28,9 +27,9 @@
 
 	          		<span class="navbar-brand" id="headertext">The Aloha State - Hawaii</span>
 	        	
-	        		<form class="navbar-form navbar-right" id="searchBar" role="search">
+	        		<form class="navbar-form navbar-right" id="hawaii-input" role="search">
   						<div class="form-group">
-    					<input type="text" class="form-control" placeholder="Search">
+    					<input type="text" class="form-control" placeholder="Add a Hawaii Button">
   						</div>
   						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
@@ -39,12 +38,15 @@
 	    </div>
   	</header> <!--Header End-->
 
-	 <!--Image Section-->
-	<div id="imgSection" class="row">
-  		<div class="col-xs-6 col-md-3"></div>
- 		
+	 <!--Button Section-->
+	<div id="hiButtons" class="row">
+  		<div class="col-md-12"></div>
 	</div>
-	<script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+
+	<!--Image Section-->
+	<div id="hiImages" class="col-xs-6 col-md-3"></div>
+	
+	<script src="assets/javascript/app.js"></script>	
 
 </body>
 </html>

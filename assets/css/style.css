@@ -4,7 +4,7 @@
 
 body { 
 
-	background-image: url("../images,/straws.png")
+	background-image: url("../images/straws.png")
 
  }
 
@@ -31,16 +31,12 @@ body {
 	
 }
 
-#searchBar {
+#hawaii-input {
 	padding: 26px 30px 20px 0px;
 	display: inline;
 
 }
 
-nav ul li {
-	display: inline;
-	float: right;
-	font-size: 20px;
-	padding: 23px 15px 5px 15px;
+#hiButtons {
 	
 }
