@@ -38,19 +38,19 @@ body {
 }
 
 button {
-	/*padding: 120px;
-	font-style: bold;
-	margin: 20px;
+	margin: 5px;
 	text-align: center;
-    background-color: #eaeaea;
-    color: #444;
-    cursor: pointer;
-    padding: 10px 0;
-    font-size: 1.2em;
-    width: 65%;
-    margin: 6px auto;
-    border: 2px solid #d6d6d6;
-    display: block;*/
+	cursor: pointer;
+	font-style: bold;
+}
 
+div#hiButtons.row {
+	padding-left: 315px;
 
 }
+
+#hiButtons {
+	padding-right: 50% ;
+}
+	
+	

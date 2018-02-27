@@ -2,15 +2,15 @@
 $(document).ready(function(){
 
 // Buttons pre-loaded to array//
-var hawaiiButtons =['Hiking', 'Scuba diving', 'Sunsets', 'Surfing', 'Volcanoes'];
+var topics =['Hiking', 'Scuba diving', 'Sunsets', 'Surfing', 'Volcanoes'];
 
 //function to display new Hawaii Topic buttons//
 
 function renderButtons(){
 
   $("#hiButtons").empty();  
-  for (var i = 0; i < hawaiiButtons.length; i++) {
-  $('#hiButtons').append('<button>' + hawaiiButtons[i] + '</button>');
+  for (var i = 0; i < topics.length; i++) {
+  $('#hiButtons').append('<button>' + topics[i] + '</button>');
        
    }
 
@@ -61,12 +61,10 @@ function renderButtons(){
         });
     });
 
-//store input from search box #addButton to create new button and add topic to above array
-
+    //store input from search box #addButton to create new button and add topic to above array
+    //add code to make animate or make gif's still
 
     // This calls the renderButtons() function
     renderButtons();
-
-
 
     });
