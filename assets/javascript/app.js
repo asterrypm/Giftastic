@@ -7,22 +7,24 @@ var topics =['Hiking', 'Scuba diving', 'Sunsets', 'Surfing', 'Volcanoes'];
 //function to display new Hawaii Topic buttons//
 
 function renderButtons(){
-
-  $("#hiButtons").empty();  
+  $(".hiButtons").empty();  
   for (var i = 0; i < topics.length; i++) {
-  $('#hiButtons').append('<button>' + topics[i] + '</button>');
-       
-   }
 
-}
+  $('.hiButtons').append('<button class='+topics[i]+' data='+topics[i]+'>' + topics[i] + '</button>');
+
+ }
+} 
+ renderButtons();  
+
     // Adding click event listen listener to all buttons
-    $("hiButtons").on("click", function() {
-      // Grabbing and storing the data-hawaii property value from the button
-      var hawaii = $(this).attr("data-hawaii");
+    $("button").on("click", function(e) {
+        console.log('test');
+        var txt = $(this).attr('class');
+      console.log(txt);
 
       // Constructing a queryURL using the tourism hawaii topic name
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        hawaii + "&api_key=zNUgiyXLe5ZSXSi9GTYp959A7f2vBHmc&limit=10";
+        txt + "&api_key=zNUgiyXLe5ZSXSi9GTYp959A7f2vBHmc&limit=10";
 
       // AJAX request with the queryURL
       $.ajax({
@@ -65,6 +67,6 @@ function renderButtons(){
     //add code to make animate or make gif's still
 
     // This calls the renderButtons() function
-    renderButtons();
+   
 
     });
