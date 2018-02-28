@@ -74,9 +74,10 @@ function renderButtons(){
       });
 
     //add code to make animate or make gif's still
-        
-       
-      /*  var gif = object.data
+   
+     
+
+        var gif = object.data
         // Loop through the data array inside the object
          for (var i=0; i< gif.length; i++) {
             
@@ -86,7 +87,7 @@ function renderButtons(){
         $("#hiImages").prepend("<div class='col-md-2 text-center giftastic'>  <img class='gifs' data-still='"+still+"' data-animate='"+animate+"' data-state='still' src='"+ still+"'> <p class='rating'>Rating:  "+ rating +" </p> </div>")
             }
         })
-    }
+
 
         // Function for switching between still and animated gif
         function stillAnimate(){
@@ -102,9 +103,8 @@ function renderButtons(){
 
             }
 
-    $(document).on("click", ".gifs", stillAnimate)*/
+    $(document).on("click", ".gifs", stillAnimate)
    
-    renderButtons();  
 
     
 
