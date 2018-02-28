@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 // Buttons pre-loaded to array//
-var topics =['Hiking', 'Scuba diving', 'Sunsets', 'Surfing', 'Volcanoes'];
+var topics =['Hiking', 'Sunsets', 'Surfing', 'Volcanoes'];
 
 //function to display new Hawaii Topic buttons//
 
@@ -18,9 +18,8 @@ function renderButtons(){
 
     // Adding click event listen listener to all buttons
     $("button").on("click", function(e) {
-        console.log('test');
         var txt = $(this).attr('class');
-      console.log(txt);
+        console.log(txt);
 
       // Constructing a queryURL using the tourism hawaii topic name
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -63,10 +62,50 @@ function renderButtons(){
         });
     });
 
-    //store input from search box #addButton to create new button and add topic to above array
+
+      $("#submit-btn").on("click", function(event) {
+        event.preventDefault();
+
+        var hawaiiTopic = $("#addTopic").val().trim();
+        
+        topics.push(hawaiiTopic);
+
+        renderButtons();
+      });
+
     //add code to make animate or make gif's still
+        
+       
+      /*  var gif = object.data
+        // Loop through the data array inside the object
+         for (var i=0; i< gif.length; i++) {
+            
+        var rating = gif[i].rating;
+        var still = gif[i].images.fixed_height_still.url;
+        var animate = gif[i].images.fixed_height.url;
+        $("#hiImages").prepend("<div class='col-md-2 text-center giftastic'>  <img class='gifs' data-still='"+still+"' data-animate='"+animate+"' data-state='still' src='"+ still+"'> <p class='rating'>Rating:  "+ rating +" </p> </div>")
+            }
+        })
+    }
 
-    // This calls the renderButtons() function
+        // Function for switching between still and animated gif
+        function stillAnimate(){
+                var state = $(this).attr("data-state");
+
+                if( state === "still") {
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                } else {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+                }
+
+            }
+
+    $(document).on("click", ".gifs", stillAnimate)*/
    
+    renderButtons();  
 
-    });
+    
+
+

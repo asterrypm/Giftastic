@@ -31,7 +31,7 @@ body {
 	
 }
 
-#hawaii-input {
+#hawaiiForm {
 	padding: 26px 30px 20px 0px;
 	display: inline;
 
@@ -44,7 +44,7 @@ button {
 	font-style: bold;
 }
 
-div#hiButtons.row {
+div.hiButtons {
 	padding-left: 315px;
 
 }
