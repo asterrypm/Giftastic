@@ -51,6 +51,10 @@ function renderButtons(){
             var hawaiiImage = $("<img>");
             // Setting the src attribute of the image to a property pulled off the result item
             hawaiiImage.attr("src", results[i].images.fixed_height.url);
+            hawaiiImage.attr("data-state","animate");
+            hawaiiImage.attr("data-still",results[i].images.fixed_height_still.url);
+            hawaiiImage.attr("data-animate",results[i].images.fixed_height.url);
+            hawaiiImage.attr("class","gifs");
 
             // Appending the paragraph and image tag to the hawaiiDiv
             hawaiiDiv.append(p);
@@ -75,22 +79,10 @@ function renderButtons(){
 
     //add code to make animate or make gif's still
    
-     
-
-        var gif = object.data
-        // Loop through the data array inside the object
-         for (var i=0; i< gif.length; i++) {
-            
-        var rating = gif[i].rating;
-        var still = gif[i].images.fixed_height_still.url;
-        var animate = gif[i].images.fixed_height.url;
-        $("#hiImages").prepend("<div class='col-md-2 text-center giftastic'>  <img class='gifs' data-still='"+still+"' data-animate='"+animate+"' data-state='still' src='"+ still+"'> <p class='rating'>Rating:  "+ rating +" </p> </div>")
-            }
-        })
+      $(document).on("click", ".gifs", stillAnimate)
 
 
-        // Function for switching between still and animated gif
-        function stillAnimate(){
+      function stillAnimate(){
                 var state = $(this).attr("data-state");
 
                 if( state === "still") {
@@ -102,8 +94,22 @@ function renderButtons(){
                 }
 
             }
+        /*var gif = object.data*/
+        // Loop through the data array inside the object
+        // for (var i=0; i< gif.length; i++) {
+            
+        // var rating = gif[i].rating;
+        // var still = gif[i].images.fixed_height_still.url;
+        // var animate = gif[i].images.fixed_height.url;
+        // $("#hiImages").prepend("<div class='col-md-2 text-center giftastic'>  <img class='gifs' data-still='"+still+"' data-animate='"+animate+"' data-state='still' src='"+ still+"'> <p class='rating'>Rating:  "+ rating +" </p> </div>")
+        //     }//
+        })
 
-    $(document).on("click", ".gifs", stillAnimate)
+
+        // Function for switching between still and animated gif
+        
+
+   
    
 
     
